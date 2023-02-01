@@ -97,6 +97,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.RunPython(forwards_func, reverse_func),
     ]
+
 from django.db import migrations
 
 
