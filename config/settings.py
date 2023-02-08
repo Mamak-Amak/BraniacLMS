@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "markdownify.apps.MarkdownifyConfig",
+    "social_django",
     "mainapp",
     "authapp",
 ]
@@ -69,6 +70,8 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
                 "mainapp.context_processors.example.simple_context_processor",
+                "social_django.context_processors.backends",
+                "social_django.context_processors.login_redirect",
             ],
         },
     },
@@ -107,6 +110,14 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 AUTH_USER_MODEL = "authapp.CustomUser"
+
+AUTHENTICATION_BACKENDS = (
+    "social_core.backends.github.GithubOAuth2",
+    "django.contrib.auth.backends.ModelBackend",
+)
+
+SOCIAL_AUTH_GITHUB_KEY = "cd8e6b6966e4f8762fb5"
+SOCIAL_AUTH_GITHUB_SECRET = "02329417b48b41101c862ae5c8ba6e532d0b4281"
 
 LOGIN_REDIRECT_URL = "mainapp:main_page"
 LOGOUT_REDIRECT_URL = "mainapp:main_page"
