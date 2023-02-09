@@ -1,6 +1,7 @@
 import os
 
 from django.contrib import messages
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView, LogoutView
 from django.http.response import HttpResponseRedirect
 from django.urls import reverse_lazy
