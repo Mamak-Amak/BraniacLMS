@@ -97,6 +97,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.RunPython(forwards_func, reverse_func),
     ]
+<<<<<<< HEAD
 
 from django.db import migrations
 
@@ -193,3 +194,5 @@ class Migration(migrations.Migration):
     dependencies = [
         ("mainapp", "0001_initial"),
     ]
+=======
+>>>>>>> master
