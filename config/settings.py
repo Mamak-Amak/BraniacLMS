@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "social_django",
     "mainapp",
     "authapp",
+    "crispy_forms",
 ]
 
 MIDDLEWARE = [
@@ -114,12 +115,15 @@ AUTH_USER_MODEL = "authapp.CustomUser"
 AUTHENTICATION_BACKENDS = (
     "social_core.backends.github.GithubOAuth2",
     "django.contrib.auth.backends.ModelBackend",
+    
 )
 
 LOGIN_REDIRECT_URL = "mainapp:main_page"
 LOGOUT_REDIRECT_URL = "mainapp:main_page"
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
