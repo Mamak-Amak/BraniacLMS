@@ -33,7 +33,6 @@ if DEBUG:
         "127.0.0.1",
     ]
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -174,7 +173,9 @@ LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
     "formatters": {
-        "console": {"format": "[%(asctime)s] %(levelname)s %(name)s (%(lineno)d) %(message)s"},
+        "console": {
+            "format": "[%(asctime)s] %(levelname)s %(name)s (%(lineno)d) %(message)s"
+        },
     },
     "handlers": {
         "file": {
@@ -194,6 +195,7 @@ LOGGING = {
     },
 }
 
+# In the end of file
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
