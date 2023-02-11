@@ -11,9 +11,11 @@ from django.http import JsonResponse
 import logging
 
 from django.conf import settings
+from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
 from django.core.cache import cache
 from django.http import FileResponse, JsonResponse
+from django.http.response import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.template.loader import render_to_string
 from django.urls import reverse_lazy
@@ -23,8 +25,11 @@ from django.views.generic import CreateView, DeleteView, DetailView, ListView, T
 from mainapp import forms as mainapp_forms
 from mainapp import models as mainapp_models
 from mainapp import tasks as mainapp_tasks
+<<<<<<< HEAD
 
 logger = logging.getLogger(__name__)
+=======
+>>>>>>> lesson_7 Email via celery
 
 
 class MainPageView(TemplateView):

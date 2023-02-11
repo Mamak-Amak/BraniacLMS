@@ -227,4 +227,8 @@ CELERY_RESULT_BACKEND = "redis://localhost:6379"
 
 # Email as files for debug
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+<<<<<<< HEAD
 EMAIL_FILE_PATH = "var/email-messages/"
+=======
+EMAIL_FILE_PATH = "var/email-messages/"
+>>>>>>> lesson_7 Email via celery
