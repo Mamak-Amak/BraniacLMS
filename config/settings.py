@@ -26,6 +26,7 @@ SECRET_KEY = "django-insecure-pd&w016(#3#_th*$r03ak@%e^o(6qhua=#-#b2oxvt_y1dg(em
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["*"]
 
 if DEBUG:
     INTERNAL_IPS = [
@@ -33,6 +34,11 @@ if DEBUG:
         "127.0.0.1",
     ]
 
+if DEBUG:
+    INTERNAL_IPS = [
+        "192.168.1.4",
+        "127.0.0.1",
+    ]
 
 # Application definition
 
@@ -174,7 +180,9 @@ LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
     "formatters": {
-        "console": {"format": "[%(asctime)s] %(levelname)s %(name)s (%(lineno)d) %(message)s"},
+        "console": {
+            "format": "[%(asctime)s] %(levelname)s %(name)s (%(lineno)d) %(message)s"
+        },
     },
     "handlers": {
         "file": {
@@ -194,6 +202,7 @@ LOGGING = {
     },
 }
 
+# In the end of file
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
