@@ -3,9 +3,12 @@ from typing import Dict, Union
 
 from celery import shared_task
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 from django.conf import settings
 >>>>>>> lesson_7 Email via celery
+=======
+>>>>>>> Lesson 6 (#5)
 from django.contrib.auth import get_user_model
 from django.core.mail import send_mail
 
@@ -25,7 +28,11 @@ def send_feedback_mail(message_form: Dict[str, Union[int, str]]) -> None:
         fail_silently=False,
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
     return None
 =======
     return None
 >>>>>>> lesson_7 Email via celery
+=======
+    return None
+>>>>>>> Lesson 6 (#5)

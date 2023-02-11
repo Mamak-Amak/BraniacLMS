@@ -33,6 +33,7 @@ if DEBUG:
         "127.0.0.1",
     ]
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -173,9 +174,7 @@ LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
     "formatters": {
-        "console": {
-            "format": "[%(asctime)s] %(levelname)s %(name)s (%(lineno)d) %(message)s"
-        },
+        "console": {"format": "[%(asctime)s] %(levelname)s %(name)s (%(lineno)d) %(message)s"},
     },
     "handlers": {
         "file": {
@@ -195,7 +194,6 @@ LOGGING = {
     },
 }
 
-# In the end of file
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
@@ -228,7 +226,11 @@ CELERY_RESULT_BACKEND = "redis://localhost:6379"
 # Email as files for debug
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 <<<<<<< HEAD
+<<<<<<< HEAD
 EMAIL_FILE_PATH = "var/email-messages/"
 =======
 EMAIL_FILE_PATH = "var/email-messages/"
 >>>>>>> lesson_7 Email via celery
+=======
+EMAIL_FILE_PATH = "var/email-messages/"
+>>>>>>> Lesson 6 (#5)
