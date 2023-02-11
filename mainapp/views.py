@@ -19,6 +19,7 @@ from django.http.response import HttpResponseRedirect
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
 from django.core.cache import cache
 from django.http import FileResponse, JsonResponse
+from django.http.response import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.template.loader import render_to_string
 from django.urls import reverse_lazy

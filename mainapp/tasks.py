@@ -4,11 +4,15 @@ from typing import Dict, Union
 from celery import shared_task
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 from django.conf import settings
 >>>>>>> lesson_7 Email via celery
 =======
 >>>>>>> Lesson 6 (#5)
+=======
+from django.conf import settings
+>>>>>>> lesson_7 Email via celery
 from django.contrib.auth import get_user_model
 from django.core.mail import send_mail
 
