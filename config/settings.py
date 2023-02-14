@@ -26,13 +26,6 @@ SECRET_KEY = "django-insecure-pd&w016(#3#_th*$r03ak@%e^o(6qhua=#-#b2oxvt_y1dg(em
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-ALLOWED_HOSTS = ["*"]
-
-if DEBUG:
-    INTERNAL_IPS = [
-        "192.168.1.4",
-        "127.0.0.1",
-    ]
 
 if DEBUG:
     INTERNAL_IPS = [
@@ -234,12 +227,4 @@ CELERY_RESULT_BACKEND = "redis://localhost:6379"
 
 # Email as files for debug
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
-<<<<<<< HEAD
-<<<<<<< HEAD
 EMAIL_FILE_PATH = "var/email-messages/"
-=======
-EMAIL_FILE_PATH = "var/email-messages/"
->>>>>>> lesson_7 Email via celery
-=======
-EMAIL_FILE_PATH = "var/email-messages/"
->>>>>>> Lesson 6 (#5)
