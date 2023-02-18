@@ -21,4 +21,6 @@ def send_feedback_mail(message_form: Dict[str, Union[int, str]]) -> None:
         ["techsupport@braniac.com"],  # send to
         fail_silently=False,
     )
+
     return None
+
