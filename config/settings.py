@@ -123,15 +123,12 @@ AUTH_USER_MODEL = "authapp.CustomUser"
 AUTHENTICATION_BACKENDS = (
     "social_core.backends.github.GithubOAuth2",
     "django.contrib.auth.backends.ModelBackend",
-    
 )
 
 LOGIN_REDIRECT_URL = "mainapp:main_page"
 LOGOUT_REDIRECT_URL = "mainapp:main_page"
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
-
-CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
@@ -177,9 +174,11 @@ LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
     "formatters": {
+
         "console": {
             "format": "[%(asctime)s] %(levelname)s %(name)s (%(lineno)d) %(message)s"
         },
+
     },
     "handlers": {
         "file": {
@@ -199,7 +198,9 @@ LOGGING = {
     },
 }
 
+
 # In the end of file
+
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
@@ -235,4 +236,6 @@ EMAIL_FILE_PATH = "var/email-messages/"
 
 LOCALE_PATHS = [BASE_DIR / "locale"]
 
+
 SELENIUM_DRIVER_PATH_FF = BASE_DIR / "var" / "selenium" / "geckodriver"
+
