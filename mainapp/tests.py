@@ -95,7 +95,6 @@ class TestNewsPage(TestCase):
         news_obj.refresh_from_db()
         self.assertTrue(news_obj.deleted)
 
-
 import pickle
 from unittest import mock
 
@@ -133,7 +132,6 @@ class TestTaskMailSend(TestCase):
         user_obj = authapp_models.CustomUser.objects.first()
         mainapp_tasks.send_feedback_mail({"user_id": user_obj.id, "message": message_text})
         self.assertEqual(django_mail.outbox[0].body, message_text)
-
 
 from django.conf import settings
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
@@ -198,4 +196,6 @@ class TestNewsSelenium(StaticLiveServerTestCase):
     def tearDown(self):
         # Close browser
         self.selenium.quit()
+
         super().tearDown()
+
